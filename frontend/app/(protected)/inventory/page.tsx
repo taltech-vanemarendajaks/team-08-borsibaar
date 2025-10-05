@@ -269,14 +269,14 @@ export default function Inventory() {
   const getStockStatus = (quantity) => {
     const qty = parseFloat(quantity);
     if (qty === 0)
-      return { color: "text-red-100", bg: "bg-red-950", label: "Out of Stock" };
+      return { color: "text-red-100", bg: "bg-red-900", label: "Out of Stock" };
     if (qty < 10)
       return {
         color: "text-yellow-600",
         bg: "bg-yellow-50",
         label: "Low Stock",
       };
-    return { color: "text-green-100", bg: "bg-green-950", label: "In Stock" };
+    return { color: "text-green-100", bg: "bg-green-900", label: "In Stock" };
   };
 
   if (loading) {
@@ -367,10 +367,10 @@ export default function Inventory() {
                     return (
                       <tr
                         key={item.id}
-                        className="border-b border-gray-100 hover:bg-gray-50"
+                        className="border-b border-gray-400 hover:bg-gray-800"
                       >
                         <td className="py-3 px-4">
-                          <div className="font-medium text-gray-400">
+                          <div className="font-medium text-gray-300">
                             {item.productName}
                           </div>
                           <div className="text-sm text-gray-400">
@@ -378,7 +378,7 @@ export default function Inventory() {
                           </div>
                         </td>
                         <td className="py-3 px-4 text-center">
-                          <span className="text-lg font-semibold text-gray-400">
+                          <span className="text-lg font-semibold text-gray-300">
                             {parseFloat(item.quantity).toFixed(2)}
                           </span>
                         </td>
@@ -396,28 +396,28 @@ export default function Inventory() {
                           <div className="flex justify-center gap-2">
                             <Button
                               onClick={() => openAddModal(item)}
-                              className="p-2 text-green-100 bg-green-500 hover:bg-green-950 rounded-lg transition"
+                              className="p-2 text-green-100 bg-green-700 hover:bg-green-800 rounded-lg transition"
                               title="Add Stock"
                             >
                               <Plus className="w-4 h-4" />
                             </Button>
                             <Button
                               onClick={() => openRemoveModal(item)}
-                              className="p-2 text-red-100 bg-red-500 hover:bg-red-950 rounded-lg transition"
+                              className="p-2 text-red-100 bg-red-700 hover:bg-red-800 rounded-lg transition"
                               title="Remove Stock"
                             >
                               <Minus className="w-4 h-4" />
                             </Button>
                             <Button
                               onClick={() => openAdjustModal(item)}
-                              className="p-2 text-blue-100 bg-blue-500 hover:bg-blue-950 rounded-lg transition"
+                              className="p-2 text-blue-100 bg-blue-700 hover:bg-blue-800 rounded-lg transition"
                               title="Adjust Stock"
                             >
                               <Edit className="w-4 h-4" />
                             </Button>
                             <Button
                               onClick={() => openHistoryModal(item)}
-                              className="p-2 text-gray-400 hover:bg-gray-100 rounded-lg transition"
+                              className="p-2 text-gray-400 bg-gray-700 hover:bg-gray-800 rounded-lg transition"
                               title="View History"
                             >
                               <History className="w-4 h-4" />
