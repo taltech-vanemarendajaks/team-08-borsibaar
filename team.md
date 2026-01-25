@@ -4,6 +4,7 @@
 ## Tiimi liikmed:
     Meeskond 8
 - Andy Reiu (AR2147)
+- Kristo Laasik (KristoLaasik)
 
 
 ## Workflow:
