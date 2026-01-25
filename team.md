@@ -43,3 +43,4 @@
 - Pull Request’id merge’itakse GitHubi kaudu (mitte otse `dev` branch’i).
 - Pärast merge’i suletakse seotud Issue automaatselt.
 - Merge’i teeb Pull Request’i autor.
+- Kustuta feature branch merge'i käigus.
