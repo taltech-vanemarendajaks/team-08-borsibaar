@@ -18,7 +18,7 @@
 - Kõik tööd on kirjeldatud GitHub Issues all.
 
 ### Feature branch’i loomine ###
-- Iga Issue jaoks luuakse eraldi feature branch `main` branch’ist. 
+- Iga Issue jaoks luuakse eraldi feature branch `dev` branch’ist. 
 - Branch’i nimekuju võiks olla: feature/VL-<ISSUE_NR>-<PEREKONNANIMI>
 
 ### Arendus ja commit’id ###
@@ -30,7 +30,7 @@
 
 ### Push ja Pull Request ###
 - Feature branch pushitakse GitHubi.
-- Avatakse Pull Request `main` branch’i suunas.
+- Avatakse Pull Request `dev` branch’i suunas.
 - Pull Request’i kirjeldus sisaldab vastava Issue sulgemise käsku: Closes #<ISSUE_NR>
 
 ### Code review ###
@@ -39,6 +39,6 @@
 - Autor vastab kommentaaridele ja teeb vajadusel täiendavaid commit’e.
 
 ### Merge ja lõpetamine ###
-- Pull Request’id merge’itakse GitHubi kaudu (mitte otse `main` branch’i).
+- Pull Request’id merge’itakse GitHubi kaudu (mitte otse `dev` branch’i).
 - Pärast merge’i suletakse seotud Issue automaatselt.
 - Merge’i teeb Pull Request’i autor.
