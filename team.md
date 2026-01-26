@@ -4,6 +4,7 @@
 ## Tiimi liikmed:
     Meeskond 8
 - Andy Reiu (AR2147)
+- Alex Ots (otsalex)
 
 
 ## Workflow:
