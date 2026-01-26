@@ -15,6 +15,7 @@
 - Andy Reiu (AR2147)
 - Robin Rattasepp (Robin987987)
 - Alex Ots (otsalex)
+- Aliine Lotman (aliinelotman)
 
 
 ### 🔁 Töövoog (Workflow)
