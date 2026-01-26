@@ -1,10 +1,20 @@
 # Vertikaalne Lõpmatus
 
+                            ○
+                            │
+                            ∞
+                            │
+                            ○
+
+                   VERTICAL · INFINITY
+
+
 
 ### 👥 Tiim
 **Meeskond 8**
 - Andy Reiu (AR2147)
 - Robin Rattasepp (Robin987987)
+- Alex Ots (otsalex)
 
 
 ### 🔁 Töövoog (Workflow)
