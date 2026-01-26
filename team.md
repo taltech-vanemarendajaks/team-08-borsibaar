@@ -1,5 +1,14 @@
 # Vertikaalne Lõpmatus
 
+                            ○
+                            │
+                            ∞
+                            │
+                            ○
+
+                   VERTICAL · INFINITY
+
+
 
 ## Tiimi liikmed:
     Meeskond 8
