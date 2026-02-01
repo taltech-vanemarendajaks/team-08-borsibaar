@@ -251,5 +251,35 @@ Minor issues may be accepted if they:
 - Are documented as known limitations
 
 ## 7. Roles and responsibilities
+
+Using agile method. Börsibaar project is study project and all team members will try different roles.
+
+**Test Manager**
+
+- Test monitoring and progress control based on the test plan
+- Owns and designs test plan, reporting.
+- Sets exit criteria and definition of done.
+- Presenting testing progress/report
+
+**Developers | Test engineers**
+
+- Test analysis
+- Defining the test conditions
+- Write and maintain unit tests, integration tests.
+- Test design
+  - Prioritization of test stories
+  - Identification of required test data,  
+- Test implementation
+  - Developing test procedures and creating test data
+  - Writing automated scripts (CI piplines)
+  - Creating and maintaining environments
+  - Secrets management
+  - Monitoring
+- Test execution
+  - Executing test procedures(manually or automatically)
+  - Comparing results with expected results
+  - Logging results
+  Repeating testis to verify defects
+
 ## 8. Risks and assumptions
 ## 9. Test deliverables
