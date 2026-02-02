@@ -282,4 +282,65 @@ Using agile method. Börsibaar project is study project and all team members wil
   Repeating testis to verify defects
 
 ## 8. Risks and assumptions
+
+### 8.1 Risks
+
+**Test Coverage Gaps**
+- **Risk**: Limited integration testing may miss issues that only occur when components interact
+- **Mitigation**: E2E tests cover critical integration points, unit tests validate individual components thoroughly
+
+**Test Data Dependencies**
+- **Risk**: Tests may become unreliable if they depend on specific data states that change
+- **Mitigation**: Tests create their own data or use seeded fixtures, implement proper cleanup
+
+**E2E Test Maintenance**
+- **Risk**: Frontend E2E tests may fail as UI changes
+- **Mitigation**: Use selectors; update tests as part of UI changes
+
+**Time Constraints**
+- **Risk**: Limited time may prevent comprehensive testing of all features
+- **Mitigation**: Prioritize testing based on risk
+
+**Junior Developer Experience**
+- **Risk**: Team members with limited testing experience may write ineffective tests.
+- **Mitigation**: Leverage mentor guidance, provide testing guidelines and examples, conduct code reviews.
+
+### 8.2 Assumptions
+
+- Team members have access to required tools
+- Basic understanding of JUnit, Mockito, and Playwright exists within the team
+- Test environments closely mirror production configuration (same database schema, similar data volumes)
+- CI pipeline is available to run automated tests on commits
+- Test failures will be addressed promptly to maintain test suite reliability
+
+
 ## 9. Test deliverables
+
+### 9.1 Test Code and Suites
+
+**Backend Unit Tests**
+- JUnit test classes in `backend/src/test/java/com/borsibaar/`
+- Test coverage for services, controllers, mappers, utilities, and security components
+- Mock configurations and test fixtures
+
+**Frontend E2E Tests**
+- Playwright tests in `./e2e`
+- Playwright test scripts covering critical user workflows
+- Test fixtures and helper functions for common operations
+- Configuration files for test execution
+
+### 9.2 Documentation
+
+**Test Plan (TEST_PLAN.md)**
+- Document defining testing strategy, scope, and approach
+- Updated as testing strategy evolves
+
+**Test Results**
+- Unit test execution reports (from JUnit)
+- E2E test execution reports (from Playwright)
+- CI pipeline test results and history
+
+### 9.3 Defect Reports
+
+- Defects logged in GitHub under issues
+- Manual testing results documented as comments on relevant pull requests
