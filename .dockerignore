@@ -1,0 +1,13 @@
+# Root .dockerignore – used when building frontend (context: .)
+.git
+.gitignore
+*.md
+.env
+.env*
+backend
+nginx
+docker-compose*.yaml
+.github
+.idea
+.vscode
+node_modules
