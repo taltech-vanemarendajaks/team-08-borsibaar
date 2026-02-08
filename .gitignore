@@ -4,6 +4,10 @@ backend/.env
 
 .vscode/
 
+# Deploy SSH key (used by GitHub Actions; never commit)
+deploy_key
+deploy_key.pub
+
 # SSL certificates (copied during deployment, not committed)
 nginx/ssl/
 *.pem
