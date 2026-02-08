@@ -1,0 +1,11 @@
+# Backend .dockerignore – only target/*.jar is needed for the image
+src
+.mvn
+*.md
+.env
+.env.*
+.git
+.gitignore
+.idea
+.vscode
+*.iml
