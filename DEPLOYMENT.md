@@ -120,7 +120,35 @@ Paste the **entire** file content into the secret (multi-line is fine). Do not c
 
 ## 4. Add HTTPS with Certbot
 
+To enable HTTPS, obtain an SSL certificate from Let's Encrypt using Certbot:
 
+```bash
+# Install certbot if not already installed
+sudo apt install certbot -y
 
+# Get certificate (replace your-domain.com)
+sudo certbot certonly --standalone -d your-domain.com
 
-Once these steps are done, every push to `main` will build and deploy using Docker on your virtual server.
+# Copy certificates to nginx directory
+sudo mkdir -p /home/deploy/studentbar-pos-deploy/nginx/ssl
+sudo cp /etc/letsencrypt/live/your-domain.com/{fullchain,privkey,chain}.pem \
+        /home/deploy/studentbar-pos-deploy/nginx/ssl/
+sudo chmod 644 /home/deploy/studentbar-pos-deploy/nginx/ssl/*.pem
+
+# Update nginx config with your domain in nginx/conf.d/borsibaar-https.conf
+# Change server_name to your-domain.com (appears twice: HTTP and HTTPS sections)
+
+# Restart containers
+sudo su - deploy
+cd /home/deploy/studentbar-pos-deploy
+docker compose -f docker-compose.prod.yaml down
+docker compose -f docker-compose.prod.yaml up -d
+```
+
+**Certificate renewal:** Certificates auto-renew every 90 days. After renewal, copy the new certificates and restart nginx:
+```bash
+sudo cp /etc/letsencrypt/live/your-domain.com/{fullchain,privkey,chain}.pem \
+        /home/deploy/studentbar-pos-deploy/nginx/ssl/
+sudo chmod 644 /home/deploy/studentbar-pos-deploy/nginx/ssl/*.pem
+cd /home/deploy/studentbar-pos-deploy && sudo su - deploy -c "docker compose -f docker-compose.prod.yaml restart nginx"
+```
